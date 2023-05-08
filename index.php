@@ -1,3 +1,4 @@
 <?php
-echo 'Phạm Văn Đoan'
+echo 'Phạm Văn Đoan';
+echo'php';
 ?>
