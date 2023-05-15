@@ -1,5 +1,5 @@
 <?php
-ECHO'phạm văn đoan';
+/*ECHO'phạm văn đoan';
 
 function sum ($a, $b){
     return $a + $b;
@@ -19,5 +19,12 @@ function dientich(){
     $GLOBALS['s'] = $GLOBALS['a'] * $GLOBALS['b'] * 1/2;
 }
 dientich();
-echo 'Diện tích hình tam giác:'.$s;
+echo 'Diện tích hình tam giác:'.$s; */
+
+#Xuất ra trình duyệt chuỗi ‘Hello World !’
+ECHO 'Hello World !';
+
+#Xác định số phần tử của chuỗi 'HoangVanSang'
+ echo strlen('HoangVanSang');
+
 ?>
