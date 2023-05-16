@@ -64,9 +64,17 @@ print_r(split_String("pham van doan")) ;#print_r dùng để in giá trị của
 */
 
 #Viết một chương trình PHP để nối các phần tử của một mảng thành một chuỗi sử dụng hàm implode()
-
+/*
 function join_Elements_Together($string = []){
     return implode(' ', $string);
 }
 echo join_Elements_Together(['pham', 'van', 'doan']);
+*/
+
+#Viết một chương trình PHP để thêm một chuỗi vào đầu hoặc cuối của một chuỗi sử dụng hàm str_pad().
+
+function add_String($string1, $string2){
+    return str_pad($string1, 25, $string2, STR_PAD_LEFT);
+}
+echo add_String('Phạm Văn Đoan', 'handsome');
 ?>
