@@ -48,10 +48,25 @@ echo remove_The_First_Character('pham van doan');
 */
 
 #Viết một chương trình PHP để loại bỏ ký tự cuối cùng của một chuỗi sử dụng hàm rtrim().
-
-function remove_The_First_Character($string){
-    return rtrim($string);
+/*
+function remove_The_Last_Character($string){
+    return rtrim($string, -1);
 }
-echo remove_The_First_Character('pham van doan1');
+echo remove_The_Last_Character('pham van doan1');
+*/
 
+#Viết một chương trình PHP để tách một chuỗi thành một mảng các phần tử sử dụng hàm explode(). 
+/*
+function split_String($string){
+    return explode(" ", $string);
+}
+print_r(split_String("pham van doan")) ;#print_r dùng để in giá trị của mảng trong php
+*/
+
+#Viết một chương trình PHP để nối các phần tử của một mảng thành một chuỗi sử dụng hàm implode()
+
+function join_Elements_Together($string = []){
+    return implode(' ', $string);
+}
+echo join_Elements_Together(['pham', 'van', 'doan']);
 ?>
