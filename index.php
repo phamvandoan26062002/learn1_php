@@ -72,9 +72,10 @@ echo join_Elements_Together(['pham', 'van', 'doan']);
 */
 
 #Viết một chương trình PHP để thêm một chuỗi vào đầu hoặc cuối của một chuỗi sử dụng hàm str_pad().
-
+/*
 function add_String($string1, $string2){
     return str_pad($string1, 25, $string2, STR_PAD_LEFT);
 }
 echo add_String('Phạm Văn Đoan', 'handsome');
+*/
 ?>
