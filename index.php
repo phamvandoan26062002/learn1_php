@@ -71,7 +71,7 @@ function join_Elements_Together($string = []){
 echo join_Elements_Together(['pham', 'van', 'doan']);
 */
 
-#Viết một chương trình PHP để thêm một chuỗi vào đầu hoặc cuối của một chuỗi sử dụng hàm str_pad().
+#Viết một chương trình PHP để thêm một chuỗi vào đầu hoặc cuối của một chuỗi sử dụng hàm str_pad().{STR_PAD_LEFT, STR_PAD_BOTH}
 /*
 function add_String($string1, $string2){
     return str_pad($string1, 25, $string2, STR_PAD_LEFT);
@@ -79,5 +79,12 @@ function add_String($string1, $string2){
 echo add_String('Phạm Văn Đoan', 'handsome');
 */
 
-#
+#Viết một chương trình PHP để kiểm tra xem một chuỗi có kết thúc bằng một chuỗi con khác không sử dụng hàm strrchr().
+
+function check_String($string1, $string2){
+    return strrchr($string1, $string2);
+}
+echo check_String('pham van doan','doan');
+
+
 ?>
