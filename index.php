@@ -78,4 +78,6 @@ function add_String($string1, $string2){
 }
 echo add_String('Phạm Văn Đoan', 'handsome');
 */
+
+#
 ?>
