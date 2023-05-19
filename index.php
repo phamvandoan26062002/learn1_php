@@ -80,7 +80,7 @@ echo add_String('Phạm Văn Đoan', 'handsome');
 */
 
 #Viết một chương trình PHP để kiểm tra xem một chuỗi có kết thúc bằng một chuỗi con khác không sử dụng hàm strrchr().---> không dùng đk vì nó lấy ký tự cuối cùng mà mk truyền vào sau đó trả về tất cả các giá trị sau ký tự đó của chuỗi mẹ
-
+/*
 function check_String($string1, $string2){
     if(str_ends_with($string1, $string2) == false)
      {
@@ -90,6 +90,20 @@ function check_String($string1, $string2){
         echo 'Yes';} 
 }
 echo check_String('pham van doan','doan');
+*/
+
+#Viết một chương trình PHP để kiểm tra xem một chuỗi có chứa một chuỗi con khác không sử dụng hàm strstr().---> nếu dùng strpos() với cú pháp tưởng tự sẽ nhanh hơn :)))
+/*
+function check_For_Existence($string, $string1){
+    if(strstr($string, $string1) === false)
+    { echo'No';}
+    else { echo'Yes';}
+}
+echo check_For_Existence('pham van doan', 'nam' )
+*/
+
+#Viết một chương trình PHP để thay thế tất cả các ký tự trong một chuỗi không phải là chữ cái hoặc số bằng một ký tự khác sử dụng hàm preg_replace()
+
 
 
 ?>
