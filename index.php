@@ -122,8 +122,15 @@ function integer_Check($number){
 echo integer_Check(15)
 */
 
-#Viết một chương trình PHP để kiểm tra xem một chuỗi có phải là một email hợp lệ hay không sử dụng hàm filter_var().
-
-
-
+#Viết một chương trình PHP để kiểm tra xem một chuỗi có phải là một email hợp lệ hay không sử dụng hàm filter_var(). Hằng số FILTER_VALIDATE_EMAIL trong PHP được sử dụng như một tham số cho hàm filter_var() để kiểm tra tính hợp lệ của một địa chỉ email.
+/*
+function check_Email($email){
+    if(filter_var($email, FILTER_VALIDATE_EMAIL )){
+        echo "Email hợp lệ";
+    } else{
+        echo"Email không hợp lệ";
+    }
+}
+echo check_Email('phamvandoan26062002@gmail.com');
+*/
 ?>
