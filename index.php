@@ -79,10 +79,15 @@ function add_String($string1, $string2){
 echo add_String('Phạm Văn Đoan', 'handsome');
 */
 
-#Viết một chương trình PHP để kiểm tra xem một chuỗi có kết thúc bằng một chuỗi con khác không sử dụng hàm strrchr().
+#Viết một chương trình PHP để kiểm tra xem một chuỗi có kết thúc bằng một chuỗi con khác không sử dụng hàm strrchr().---> không dùng đk vì nó lấy ký tự cuối cùng mà mk truyền vào sau đó trả về tất cả các giá trị sau ký tự đó của chuỗi mẹ
 
 function check_String($string1, $string2){
-    return strrchr($string1, $string2);
+    if(str_ends_with($string1, $string2) == false)
+     {
+        echo 'No';
+     }
+    else{
+        echo 'Yes';} 
 }
 echo check_String('pham van doan','doan');
 
