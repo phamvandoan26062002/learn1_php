@@ -102,7 +102,27 @@ function check_For_Existence($string, $string1){
 echo check_For_Existence('pham van doan', 'nam' )
 */
 
-#Viết một chương trình PHP để thay thế tất cả các ký tự trong một chuỗi không phải là chữ cái hoặc số bằng một ký tự khác sử dụng hàm preg_replace()
+#Viết một chương trình PHP để thay thế tất cả các ký tự trong một chuỗi không phải là chữ cái hoặc số bằng một ký tự khác sử dụng hàm preg_replace(). Câu trúc hàm trên là: ký tự cần thay thế, ký tự thay thế, chuỗi có ký tự cần thay thế.
+/*
+function replace_Character($pattern, $replacement,$subject){
+    return preg_replace('/[^\w]/',$replacement,$subject);
+}
+echo replace_Character('','_','pham+van+doan');
+*/
+
+#Viết một chương trình PHP để kiểm tra xem một chuỗi có phải là một số nguyên hay không sử dụng hàm is_int().
+/*
+function integer_Check($number){
+    if(is_int($number)){
+        echo 'Yes';
+    }else{
+        echo 'No';
+    }
+}
+echo integer_Check(15)
+*/
+
+#Viết một chương trình PHP để kiểm tra xem một chuỗi có phải là một email hợp lệ hay không sử dụng hàm filter_var().
 
 
 
