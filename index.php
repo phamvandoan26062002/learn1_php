@@ -2,7 +2,11 @@
 #Viết một chương trình PHP để kiểm tra xem một chuỗi có bắt đầu bằng một chuỗi con khác không sử dụng hàm strncmp(). Nếu ra số âm hoặc dương thì chuỗi 2 không được bắt đầu bằng chuỗi 1 còn trả về giá trị bằng 0 thì ngược lại.
 /*
 function checkString ($string, $string1){
-    return strncmp($string, $string1, strlen($string));
+    if (strncmp($string, $string1, strlen($string)) == 0){
+        echo'Yes';
+    } else{
+        echo'No';
+    };
 }
 echo checkString('hello', 'hello world');
 */
