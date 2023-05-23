@@ -74,14 +74,14 @@ findMinMax($array);
 //câu 6:Viết chương trình PHP để sắp xếp một mảng theo thứ tự tăng dần
 /*
 $subject = [1,43,55,24];
-fuction arrange($subject){
-sort($subject, SORT_NUMERIC);
-foreach ($subject as $key => $val) {
+function arrange($subject){
+    sort($subject, SORT_NUMERIC);
+    foreach ($subject as $key => $val) {
     echo "subject[" . $key . "] = " . $val . "<br />";
+    }
 }
-}
+echo arrange($subject);
 */
-
 //câu 7: Viết chương trình PHP để tính giai thừa của một số nguyên dương
 /*
 function factorial($number) {
@@ -100,7 +100,7 @@ echo "Giai thừa của $n là: $result";
 */
 
 //câu 8:Viết chương trình PHP để tìm số nguyên tố trong một khoảng cho trước
-
+/*
 function is_Prime($number) {
     if ($number <= 1) {
         return false; 
@@ -126,3 +126,58 @@ function find_Primes_InRange($start, $end) {
 }
 
  echo find_Primes_InRange(10, 30);
+ */
+
+ // câu 9: Viết chương trình PHP để tính tổng của các số trong một mảng
+/*   
+     function sum_Of_Numbers_In_Array($array){
+        $sum = 0;
+        foreach($array as $number){
+            $sum = $sum + $number;
+        }
+        return $sum;
+     }
+     $array = array (1,2,3,4,5);
+     echo sum_Of_Numbers_In_Array($array);
+*/
+
+//câu 10: Viết chương trình PHP để in ra các số Fibonacci trong một khoảng cho trước.
+// tính số fibonacci theo công thức toán f(n-1) + f(n -2) học rồi so sánh nếu số đó lớn hơn giá trị bắt đầu và nhỏ hơn giá trị kết thúc thì nhận.
+/*
+function fibonacci($n)
+{
+    if ($n == 0) {
+        return 0;
+    } elseif ($n == 1) {
+        return 1;
+    } else {
+        return fibonacci($n - 1) + fibonacci($n - 2);
+    }
+}
+
+function print_Fibonacci_In_Range($start, $end)
+{
+    $n = 0;
+    while (fibonacci($n) <= $end) {
+        $fib = fibonacci($n);
+        if ($fib >= $start) {
+            echo $fib . " ";
+        }
+        $n++;
+    }
+}
+
+$start = 0; 
+$end = 100;
+
+echo "Các số Fibonacci trong khoảng từ $start đến $end là: ";
+print_Fibonacci_In_Range($start, $end);
+*/
+
+
+// câu 11: Viết chương trình PHP để kiểm tra xem một số có phải là số Armstrong hay không
+
+
+
+
+?>
