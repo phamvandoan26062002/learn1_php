@@ -179,19 +179,24 @@ print_Fibonacci_In_Range($start, $end);
 
 function checkArmstrong($number){
 
-    if (preg_match('/[^0-9]/', $number)){
-
+    if (preg_match('/^[1-9][0-9]*$/', $number)){//Chỉ cho nhập số và số bắt đầu không được là số 0
+            $sum = 0;
         while ($number >= 0){
-            
+            $val = $number % 10;
+            $sum += pow($val, $number);
+            $number = $number / 10;
         }
-
-
-        
+        if ($number == $sum){
+            echo "Đây là số Armstrong";
+        }else{
+            echo"Đây không phải số Armstrong";
+        }
     }else{
         echo 'Đây không phải là số Armstrong';
     }
 
 }
 
+echo checkArmstrong(135);
 
 ?>
