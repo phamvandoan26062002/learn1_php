@@ -177,7 +177,21 @@ print_Fibonacci_In_Range($start, $end);
 
 // câu 11: Viết chương trình PHP để kiểm tra xem một số có phải là số Armstrong hay không
 
+function checkArmstrong($number){
 
+    if (preg_match('/[^0-9]/', $number)){
+
+        while ($number >= 0){
+            
+        }
+
+
+        
+    }else{
+        echo 'Đây không phải là số Armstrong';
+    }
+
+}
 
 
 ?>
