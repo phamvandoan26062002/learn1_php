@@ -176,13 +176,13 @@ print_Fibonacci_In_Range($start, $end);
 
 
 // câu 11: Viết chương trình PHP để kiểm tra xem một số có phải là số Armstrong hay không
-/*
+
 function checkArmstrong($number){
 
-    // if (preg_match('/^[1-9][0-9]*$/', $number)){//Chỉ cho nhập số và số bắt đầu không được là số 0
+     if (preg_match('/^[1-9][0-9]*$/', $number)){//Chỉ cho nhập số và số bắt đầu không được là số 0
             $sum = 0;
             $number1 = $number;
-        while ($number != 0){
+        while ($number > 0){
             $val = $number % 10;
             $sum += pow($val, strlen($number1));
             $number = $number / 10;
@@ -192,34 +192,11 @@ function checkArmstrong($number){
         }else{
             echo"Đây không phải số Armstrong";
         }
-    // }else{
-    //     echo 'Đây không phải là số Armstrong';
-    // }
+    }else{
+        echo 'Đây không phải là số Armstrong';
+    }
 }
 
-checkArmstrong(135);
-*/
-// function isArmstrongNumber($number) {
-//     $originalNumber = $number;
-//     $sum = 0;
-//     $digits = strlen($number);
-    
-//     while ($number > 0) {
-//         $digit = $number % 10;
-//         $sum += pow($digit, $digits);
-//         $number = (int)($number / 10);
-//     }
-    
-//     return $sum === $originalNumber;
-// }
+checkArmstrong(138,86);
 
-// // Test chương trình với một số cụ thể
-// $number = 153;
-
-// if (isArmstrongNumber($number)) {
-//     echo "$number là số Armstrong";
-// } else {
-//     echo "$number không phải là số Armstrong";
-// }
-echo'áhgdasjsbdna';
 ?>
