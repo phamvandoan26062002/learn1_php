@@ -318,4 +318,17 @@ print_r(add_Element($arr, $element));
 */
 
 // câu 21: Viết chương trình PHP để tìm số lớn thứ hai trong một mảng
+/*
+function   sort_Array_In_Descending_Order($arr){
+    rsort($arr);
+    return $arr[1];
+}
+$arr = array( 8, 236, 534, 2, 55, 46);
+print_r(sort_Array_In_Descending_Order($arr));
+*/
+
+//Câu 22: Viết chương trình PHP để tìm ước số chung lớn nhất và bội số chung nhỏ nhất của hai số nguyên dương.
+
+
+
 ?>
