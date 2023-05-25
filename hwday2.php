@@ -277,5 +277,21 @@ $string = '11111111';
 echo string_Palindrome($string);
 */
 
+//câu 18: Viết chương trình PHP để đếm số lần xuất hiện của một phần tử trong một mảng
+
+function find_Element_Position($arr, $phan_tu) {
+    $vi_tri = [];
+    foreach ($arr as $key => $value) {
+        if ($value === $phan_tu) {
+            $vi_tri[] = $key;
+            
+        }
+    }
+    return count($vi_tri);
+}
+
+$arr = array(1, 2, 3, 4, 3, 5, 3);
+$phan_tu = 3;
+$result =find_Element_Position($arr, $phan_tu);
 
 ?>
