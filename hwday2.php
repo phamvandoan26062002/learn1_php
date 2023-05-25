@@ -306,5 +306,16 @@ $arr = array( 8, 236, 534, 2, 55, 46);
 print_r(sort_Array_In_Descending_Order($arr));
 */
 
-//câu 20: 
+//câu 20: Viết chương trình PHP để thêm một phần tử vào đầu hoặc cuối của một mảng
+/*
+function add_Element( $arr, $element){
+     array_push($arr, $element);
+     return $arr;
+}
+$arr = array('Pham', 'Van', 'Doan');
+$element = 102;
+print_r(add_Element($arr, $element));
+*/
+
+// câu 21: Viết chương trình PHP để tìm số lớn thứ hai trong một mảng
 ?>
