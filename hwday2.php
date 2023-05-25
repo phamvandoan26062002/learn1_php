@@ -309,7 +309,7 @@ print_r(sort_Array_In_Descending_Order($arr));
 //câu 20: Viết chương trình PHP để thêm một phần tử vào đầu hoặc cuối của một mảng
 /*
 function add_Element( $arr, $element){
-     array_push($arr, $element);
+     array_push($arr, $element);//nếu muốn thêm vào đầu thì dùng array_unshift($arr, $element)
      return $arr;
 }
 $arr = array('Pham', 'Van', 'Doan');
@@ -328,7 +328,85 @@ print_r(sort_Array_In_Descending_Order($arr));
 */
 
 //Câu 22: Viết chương trình PHP để tìm ước số chung lớn nhất và bội số chung nhỏ nhất của hai số nguyên dương.
+/*
+function common_Divisor_And_Common_Multiple($number, $number1){
+    $array = [];
+    for ($i = $number; $i > 1; $i--){
+        if ($number % $i ==0 and $number1 % $i==0){
+            $array[] = $i;
+            break;
+        }
+    }
+    for ($j = $number1; ;$j++){
+        if($j % $number == 0 and $j % $number1 == 0){
+            $array[] = $j;
+            break;
+        }
+    }
+    return $array;
+}
+$number = 10;
+$number1 = 20;
+$result = common_Divisor_And_Common_Multiple($number, $number1);
 
+echo'Ước chung lớn nhất là:'.$result[0];
+echo "<br>";
+echo'Bội chung nhỏ nhất là:'.$result[1];
+*/
+//câu 23: Viết chương trình PHP để kiểm tra xem một số có phải là số hoàn hảo hay không.
+/*
+function perfect_Number($value){
+    $sum = 0;
+    for($i = 1; $i < $value; $i++){
+        if($value % $i ==0){
+            $sum += $i;
+        }
+    }
+    if($sum == $value){
+        echo "Đây là số hoàn hảo.";
+    }else{
+        echo'Đây không phải là số hoàn hảo.';
+    }
+}
+echo perfect_Number(6);
+*/
 
+//câu 24:Viết chương trình PHP để tìm số lẻ lớn nhất trong một mảng
+/*
+function largest_Odd_Number($arr){
+    rsort($arr);
+    foreach($arr as $number){
+        if($number % 2 !=0){
+            return $number;
+            break;
+        }
+    }
+}
+$arr = array(8,6,15,98,35);
+echo largest_Odd_Number($arr);
+*/
 
+//câu 25: Viết chương trình PHP để kiểm tra xem một số có phải là số nguyên tố hay không
+/*
+function isPrime($number) {
+    if ($number < 2) {
+        return false;
+    }
+    
+    for ($i = 2; $i <= sqrt($number); $i++) {
+        if ($number % $i == 0) {
+            return false;
+        }
+    }
+    
+    return true;
+}
+
+$number = 17; 
+if (isPrime($number)) {
+    echo "$number là số nguyên tố.";
+} else {
+    echo "$number không phải là số nguyên tố.";
+}
+*/
 ?>
