@@ -176,7 +176,7 @@ print_Fibonacci_In_Range($start, $end);
 
 
 // câu 11: Viết chương trình PHP để kiểm tra xem một số có phải là số Armstrong hay không
-
+/*
 function checkArmstrong($number){
 
      if (preg_match('/^[1-9][0-9]*$/', $number)){//Chỉ cho nhập số và số bắt đầu không được là số 0
@@ -198,5 +198,84 @@ function checkArmstrong($number){
 }
 
 checkArmstrong(138,86);
+*/
+
+//câu 12:Viết chương trình PHP để chèn một phần tử vào một mảng ở vị trí bất kỳ
+/*
+function insert_Element_Into_Array($arr, $element, $location) {
+    array_splice($arr, $location, 0, $element);
+    return $arr;
+}
+$arr = array(1,2,3,4,5,6,7,8,9,10,11,12,13);
+$element = 100;
+$location = 4;
+print_r(insert_Element_Into_Array($arr, $element, $location));
+*/
+
+//câu 13: Viết chương trình PHP để loại bỏ các phần tử trùng lặp trong một mảng
+/*
+function remove_Duplicate_Elements($arr) {
+    $uniqueArr = array_unique($arr);//dùng array_unique để loại bỏ các phần tử giống nhau
+    return $uniqueArr;
+}
+
+$arr = array(1, 2, 2, 3, 4, 4, 5, 5);
+$result = remove_Duplicate_Elements($arr);
+print_r($result);
+*/
+
+//câu 14: Viết chương trình PHP để tìm vị trí của một phần tử trong một mảng.
+/*
+function find_Element_Position($arr, $phan_tu) {
+    $vi_tri = [];
+    foreach ($arr as $key => $value) {
+        if ($value === $phan_tu) {
+            $vi_tri[] = $key;
+        }
+    }
+    return $vi_tri;
+}
+
+$arr = array(1, 2, 3, 4, 3, 5, 3);
+$phan_tu = 3;
+$result =find_Element_Position($arr, $phan_tu);
+echo "Các vị trí của phần tử $phan_tu trong mảng là: " . implode(", ", $result);
+*/
+
+//Câu 15: Viết chương trình PHP để đảo ngược một chuỗi.
+/*
+function reverse_String($string){
+    return $reversedString = strrev($string);
+}
+$string ='naoD naV mahP';
+$result = reverse_String($string);
+echo 'Chuỗi đảo ngược là:  ' . $result;
+*/
+
+//Câu 16:Viết chương trình PHP để tính số lượng phần tử trong một mảng.
+/*
+function element_Count($arr){
+     return count($arr);
+}
+$arr = array(1,2,3,4,4,4,5);
+$result = element_Count($arr);
+echo 'Số lượng phần tử của mảng là:' . $result;
+*/
+
+//câu 17:Viết chương trình PHP để kiểm tra xem một chuỗi có phải là chuỗi Palindrome hay không
+/*
+function string_Palindrome($string){
+    $reversedString = strrev($string);
+
+    if($reversedString === $string){
+        echo"Đây là chuỗi Palindrome";
+    }else{
+        echo"Đây không phải là chuỗi Palindrome";
+    }
+}
+$string = '11111111';
+echo string_Palindrome($string);
+*/
+
 
 ?>
