@@ -226,20 +226,20 @@ print_r($result);
 
 //câu 14: Viết chương trình PHP để tìm vị trí của một phần tử trong một mảng.
 /*
-function find_Element_Position($arr, $phan_tu) {
-    $vi_tri = [];
+function find_Element_Position($arr, $element) {
+    $location = [];
     foreach ($arr as $key => $value) {
-        if ($value === $phan_tu) {
-            $vi_tri[] = $key;
+        if ($value === $element) {
+            $location[] = $key;
         }
     }
-    return $vi_tri;
+    return $location;
 }
 
 $arr = array(1, 2, 3, 4, 3, 5, 3);
-$phan_tu = 3;
-$result =find_Element_Position($arr, $phan_tu);
-echo "Các vị trí của phần tử $phan_tu trong mảng là: " . implode(", ", $result);
+$element = 3;
+$result =find_Element_Position($arr, $element);
+echo "Các vị trí của phần tử $element trong mảng là: " . implode(", ", $result);
 */
 
 //Câu 15: Viết chương trình PHP để đảo ngược một chuỗi.
@@ -278,20 +278,33 @@ echo string_Palindrome($string);
 */
 
 //câu 18: Viết chương trình PHP để đếm số lần xuất hiện của một phần tử trong một mảng
-
-function find_Element_Position($arr, $phan_tu) {
-    $vi_tri = [];
+/*
+function find_Element_Position($arr, $element) {
+    $location = [];
     foreach ($arr as $key => $value) {
-        if ($value === $phan_tu) {
-            $vi_tri[] = $key;
-            
+        if ($value === $element) {
+            $location[] = $key;
         }
     }
-    return count($vi_tri);
+    return $location;
 }
 
 $arr = array(1, 2, 3, 4, 3, 5, 3);
-$phan_tu = 3;
-$result =find_Element_Position($arr, $phan_tu);
+$element = 3;
+$result =find_Element_Position($arr, $element);
+$count = count($result);
+echo "Số lần xuất hiện của phần tử $element trong mảng là: " .$count;
+*/
 
+//câu 19: Viết chương trình PHP để sắp xếp một mảng theo thứ tự giảm dần
+/*
+function   sort_Array_In_Descending_Order($arr){
+     rsort($arr);
+     return $arr;// vì rsort không trả về 1 bảng mà sắp xếp trực tiếp trên bảng nên ta cần return lại
+}
+$arr = array( 8, 236, 534, 2, 55, 46);
+print_r(sort_Array_In_Descending_Order($arr));
+*/
+
+//câu 20: 
 ?>
