@@ -409,4 +409,68 @@ if (isPrime($number)) {
     echo "$number không phải là số nguyên tố.";
 }
 */
+
+//Câu 26:Viết chương trình PHP để tìm số dương lớn nhất trong một mảng
+/*
+function check_positive_Numbers($arr) {
+    rsort($arr);
+   return $arr[0];
+}
+$arr = array(0, 23, 2, 234, 3);
+echo check_positive_Numbers($arr);
+*/
+
+//câu 27: Viết chương trình PHP để tìm số âm lớn nhất trong một mảng.
+/*
+function biggest_Negative_Number($arr){
+    rsort($arr);
+    foreach($arr as $val){
+        if($val < 0){
+            echo'Số âm lớn nhất trong mảng là:'. $val;
+            break;
+        }
+    }
+}
+$arr = array(9, 63, -1, 2, 23);
+echo biggest_Negative_Number($arr);
+*/
+
+//câu 28: Viết chương trình PHP để tính tổng các số lẻ từ 1 đến n.
+/*
+function sum_Odd($number){
+    $sum  = 0;
+    for($i = 1; $i <= $number; $i++){
+        if($i % 2 != 0){
+            $sum += $i;
+        }
+    }
+    return $sum;
+}
+$number = 10;
+echo sum_Odd($number);
+*/
+
+//câu 29: Viết chương trình PHP để tìm số chính phương trong một khoảng cho trước.
+/*
+function perfect_Square($number){
+    if($number / sqrt($number) == sqrt($number)){
+        return 'Đây là số chính phương.';
+    }else{
+        return 'Đây không phải là số chính phương.';
+    }
+}
+
+echo perfect_Square(10);
+*/
+
+//câu 30: Viết chương trình PHP để kiểm tra xem một chuỗi có phải là chuỗi con của một chuỗi khác hay không.
+/*
+function check_For_Existence($string, $string1){
+    if(strstr($string, $string1) === false){
+         echo'No';
+    }else { 
+        echo'Yes';}
+}
+echo check_For_Existence('pham van doan', 'nam' )
+*/
 ?>
