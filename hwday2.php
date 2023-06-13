@@ -72,16 +72,16 @@ findMinMax($array);
 */
 
 //câu 6:Viết chương trình PHP để sắp xếp một mảng theo thứ tự tăng dần
+
 /*
-$subject = [1,43,55,24];
 function arrange($subject){
-    sort($subject, SORT_NUMERIC);
-    foreach ($subject as $key => $val) {
-    echo "subject[" . $key . "] = " . $val . "<br />";
+    sort($subject);
+    return $subject;
     }
-}
-echo arrange($subject);
+$subject = [1,43,55,24];
+print_r(arrange($subject)); 
 */
+
 //câu 7: Viết chương trình PHP để tính giai thừa của một số nguyên dương
 /*
 function factorial($number) {
@@ -92,11 +92,20 @@ function factorial($number) {
     }
 }
 
-
 $n = 5;
 $result = factorial($n);
-
 echo "Giai thừa của $n là: $result";
+*/
+/*
+function factorial($number) {
+    $a = 1;
+    for($i = 1; $i <= $number; $i++){
+        $a *= $i;
+    }
+    return $a;
+}
+$number = 5;
+echo factorial($number);
 */
 
 //câu 8:Viết chương trình PHP để tìm số nguyên tố trong một khoảng cho trước
@@ -473,4 +482,5 @@ function check_For_Existence($string, $string1){
 }
 echo check_For_Existence('pham van doan', 'nam' )
 */
+
 ?>
