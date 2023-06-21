@@ -409,7 +409,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid rgb(140, 150, 140);
+    border: 1px solid rgb(106, 124, 106);
     padding: 45px;
     border-radius: 20px;
   }
