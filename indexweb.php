@@ -248,17 +248,23 @@
         </div>
 
         <div class="right_3">
-          <img src="./images/images/person.png" alt="imgage Part 3" style="height: 320px"/>
-          <div>
-            <div><img src="./images/images/card.png" alt="Icon Persion" style="height: 130px"/></div>
+          <img src="./images/images/person.png" alt="imgage Part 3" style="height: 350px"/>
+          <div class="top">
+            <div>
+              <img src="./images/images/card.png" alt="Icon Persion" style="height: 30px"/>
+            </div>
             <div>
               <p>Anmada Young</p>
               <p>Lorem ipsum, dolor sit amet consectetur</p>
             </div>
-            <div><img src="./images/images/mac.png" alt="icon message" style="height: 130px"/></div>
+            <div>
+              <img src="./images/images/star.png" alt="Icon " style="height: 30px"/>
+            </div>
           </div>
           <div>
-            <div><img src="./images/images/star.png" alt="Icon " style="height: 130px"/></div>
+            <div>
+              <img src="./images/images/mac.png" alt="icon message" style="height: 30px"/>
+            </div>
             <p>Money Tranfer success</p>
           </div>
           <div>
