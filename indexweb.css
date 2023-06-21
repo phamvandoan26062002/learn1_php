@@ -468,3 +468,6 @@ body {
   position: relative;
   left: 60px;
 }
+.choose{
+  justify-content: center;
+}
