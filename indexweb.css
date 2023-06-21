@@ -414,3 +414,19 @@ body {
     border-radius: 20px;
   }
 
+/* ----------------------------------------part_3----------------------------- */
+
+.part3{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.left_3{
+  position: relative;
+  left: 120px;
+}
+.right_3{
+  position: relative;
+  right: 120px;
+
+}
