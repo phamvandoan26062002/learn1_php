@@ -266,7 +266,6 @@
               <p>Total Income</p>
               <p>240$</p>
             </div>
-            <div><img src="./images/person.png" alt="Icon grouth up" /></div>
           </div>
         </div>
         </div>
