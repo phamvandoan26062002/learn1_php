@@ -432,3 +432,23 @@ body {
 .left_3 h1{
   font-size: 40px;
 }
+
+.right_3 {
+  position: relative;
+}
+
+.right_3 .top {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.right_3 .down {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.top{
+  display: flex;
+  background-color: #ffffff;
+}

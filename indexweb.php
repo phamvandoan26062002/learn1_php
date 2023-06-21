@@ -249,6 +249,7 @@
 
         <div class="right_3">
           <img src="./images/images/person.png" alt="imgage Part 3" style="height: 350px"/>
+
           <div class="top">
             <div>
               <img src="./images/images/card.png" alt="Icon Persion" style="height: 30px"/>
@@ -261,7 +262,8 @@
               <img src="./images/images/star.png" alt="Icon " style="height: 30px"/>
             </div>
           </div>
-          <div>
+
+          <div class="down">
             <div>
               <img src="./images/images/mac.png" alt="icon message" style="height: 30px"/>
             </div>
