@@ -1,0 +1,416 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333333;
+}
+
+.logo p{
+    color: rgb(18, 156, 110);
+    font-size: 40px;
+    margin-top: 3rem; 
+    margin-left: 5rem;
+    font-weight: 700;
+
+}
+
+.main-menu-item{
+    list-style: none;
+}
+
+.main-menu-item a{
+    text-decoration: none;
+    color: rgba(35, 31, 31, 0.502);
+    text-transform: capitalize;
+}
+
+.main-menu-item-active a{
+    color: rgb(4, 20, 34);
+}
+
+.btn {
+    color: black;
+    background: none;
+    border: 1px solid rgb(18, 156, 110);
+    border-radius: 20px;
+    padding: 9px;
+    width: 100px;
+    height: 40px;
+}
+
+.btn-info{
+    background: rgba(18, 156, 110, 0.8);
+    color: #fff;
+    border-radius: 20px;
+}
+
+.btn-danger{
+    background: none;
+    color: #000000;
+}
+
+.btn-warning{
+    background: rgba(18, 156, 110, 0.8);
+    color: #fff;
+}
+
+.banner-description-title{
+    font-weight: bold;
+    font-size: 60px;
+}
+.banner-description-break{
+    width: 100%;
+    border: 1px solid rgba(18, 156, 110, 0.8);
+    border-top-right-radius: 1000px;
+    border-top-left-radius: 1000px;
+}
+.banner-description-content{
+    font-weight: 700;
+}
+
+.btn-round{
+    border-radius: 50px;
+}
+
+.text-grey{
+    color: #aaa;
+}
+
+.form-control-input{
+    border: none;
+    border-bottom: 1px solid #aaa;
+}
+.btn-sm{
+    padding: 5px;
+    width: 80px;
+    height: 25px;
+    font-size: 14px;
+}
+.header-top{
+    display: flex;justify-content: space-between;
+}
+.main-menu ul{
+    display: flex;
+    justify-content: flex-start;
+}
+.a{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Thiết lập menu */
+.main-menu {
+    margin-bottom: 20px;
+  }
+  
+  .main-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .main-menu ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .main-menu ul li a {
+    text-decoration: none;
+    color: #333333;
+    padding: 13px;
+  }
+  
+  .main-menu-item-active a {
+    color: #ff0000; /* Màu chữ cho menu đã chọn */
+  }
+  
+  /* Thiết lập nút */
+  .header-button-group button {
+    margin-right: 10px;
+    margin-top: 3.1rem;
+    margin-right: 25px;
+    
+  }
+  .main-menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px; 
+    margin-top: 3.7rem;
+    margin-right: 13rem;
+  }
+  .btn-info{
+    margin-right: 100px;
+  }
+  #btn_login{
+    margin-right: 0.1px;
+  }
+body {
+    background-image: url("https://donghodoapsuat.net/wp-content/uploads/2022/08/anh-nen-don-gian-cho-de.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  .header-bottom {
+    display: flex;
+    align-items: center;
+  }
+  
+  .banner-description {
+    flex: 1;
+  }
+  
+  .banner-image-wrap {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .banner-image-wrap img {
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .banner-image-wrap form {
+    margin-right: 10px;
+  }
+  
+  .form-group {
+    display: flex;
+    align-items: center;
+  }
+  
+  .form-group p {
+    margin-right: 10px;
+  }
+  
+  .form-control-input {
+    width: 100px;
+    margin-right: 10px;
+  }
+  
+  .text-grey {
+    color: grey;
+  }
+  
+  .banner-description-btn {
+    margin-top: 10px;
+    margin-left: 120px;
+  }
+  
+  .btn {
+    margin-right: 10px;
+  }
+.banner-description-content{
+    margin-left: 120px;
+
+}  
+.banner-description-title{
+    margin-left: 120px;
+
+}
+.center{
+    position: absolute;
+    border-radius: 10px;
+    width: 350px;
+    top: -140px;
+    left: 160px;
+}
+.container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  max-width: 300px; 
+  margin: 0 auto; 
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  border-radius: 9px; 
+  background-color: #ffffff;
+  margin-top: -120px;
+  transform: scale(0.65);
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.text-grey {
+  color: #888;
+  margin: 0;
+}
+
+.form-control-input {
+  padding: 5px;
+  border: 1px solid #ffffff;
+  border-radius: 3px;
+}
+.banner-image-wrap {
+  position: relative;
+}
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.text-grey {
+  color: #888;
+  margin: 0;
+}
+
+.form-control-input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.banner-image-wrap {
+  position: relative;
+}
+
+.card {
+  position: absolute;
+  top: 150px;
+  left: 300px; 
+}
+
+/* áasdasdasdas */
+.banner-image-wrap {
+  position: relative;
+}
+
+.card {
+  position: absolute;
+  top: 300%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  z-index: 1;/
+}
+
+.container2 {
+  position: relative;
+  top: 200px;
+  right: 510px;
+  background-color: #fff; 
+  padding: 5px; 
+  border-radius: 10px;
+  transform: scale(0.65);
+}
+/* -------------------------- End header------------------------ */
+
+.text2{
+  font-weight: 700;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.container3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.container3 > div {
+  margin-right: 10px; 
+}
+
+/* --------------------------------------------------------------------- */
+  
+.content1{
+  margin-left: 120px;
+  font-weight: 600;
+  font-size: 38px;
+}
+.content2{
+  margin-left: 120px;
+}
+.containers {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.left .content1 {
+  position: relative;
+  order: 1;
+  margin-bottom: 50px;
+  margin-top: 8px;
+}
+
+.left .rating {
+  position: relative;
+  margin-left: 70px;
+  order: 2;
+  display: flex;
+  gap: 10px;
+  top: 40px;
+  transform: scale(0.8);
+}
+
+.right {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  top: 70px;
+}
+.texta{
+  position: relative;
+  top: 200px;
+  left: 120px;
+}
+.rating div:not(:last-child) {
+  margin-right: 80px;}
+
+  /* Part2 */
+
+  .container4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .container4 > * {
+    margin-right: 5px; 
+  }
+  .get{
+    position: relative;
+    left: 120px;
+  }
+  .btn-get{
+    position: relative;
+    right: 150px;
+    transform: scale(1.2);
+  }
+  .container5 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .container5 > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgb(140, 150, 140);
+    padding: 45px;
+    border-radius: 20px;
+  }
+
