@@ -439,8 +439,8 @@ body {
 
 .right_3 .top {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 70px;
+  left: -170px;
 }
 
 .right_3 .down {
@@ -450,5 +450,21 @@ body {
 }
 .top{
   display: flex;
-  background-color: #ffffff;
+  background-color: #b5cbb7;
+  transform: scale(0.6);
+  border-radius: 12px;
+  padding: 5px;
+  width: 360px;
+}
+.top {
+  position: relative;
+}
+
+.top img {
+  position: absolute;
+  top: 30%;
+}
+.con{
+  position: relative;
+  left: 60px;
 }

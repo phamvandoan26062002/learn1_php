@@ -254,12 +254,9 @@
             <div>
               <img src="./images/images/card.png" alt="Icon Persion" style="height: 30px"/>
             </div>
-            <div>
-              <p>Anmada Young</p>
+            <div class="con">
+              <p><b>Anmada Young</b></p>
               <p>Lorem ipsum, dolor sit amet consectetur</p>
-            </div>
-            <div>
-              <img src="./images/images/star.png" alt="Icon " style="height: 30px"/>
             </div>
           </div>
 
