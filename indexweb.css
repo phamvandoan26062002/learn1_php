@@ -428,5 +428,7 @@ body {
 .right_3{
   position: relative;
   right: 120px;
-
+}
+.left_3 h1{
+  font-size: 40px;
 }

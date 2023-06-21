@@ -239,25 +239,26 @@
         <div class="left_3">
           <h1>What benifit will you get</h1>
           <ul>
-            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
-            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
-            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
-            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
+            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li><br>
+            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li><br>
+            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li><br>
+            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li><br>
             <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
           </ul>
         </div>
+
         <div class="right_3">
-          <img src="./images/mac.png" alt="imgage Part 3" />
+          <img src="./images/images/person.png" alt="imgage Part 3" style="height: 320px"/>
           <div>
-            <div><img src="./images/person.png" alt="Icon Persion" /></div>
+            <div><img src="./images/images/card.png" alt="Icon Persion" style="height: 130px"/></div>
             <div>
               <p>Anmada Young</p>
               <p>Lorem ipsum, dolor sit amet consectetur</p>
             </div>
-            <div><img src="./images/person.png" alt="icon message" /></div>
+            <div><img src="./images/images/mac.png" alt="icon message" style="height: 130px"/></div>
           </div>
           <div>
-            <div><img src="./images/person.png" alt="Icon " /></div>
+            <div><img src="./images/images/star.png" alt="Icon " style="height: 130px"/></div>
             <p>Money Tranfer success</p>
           </div>
           <div>
