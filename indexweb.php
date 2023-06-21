@@ -75,7 +75,6 @@
             <p class="text-grey">Total Income</p>
             <p>$250.00</p>
           </div>
-
         </div>
       </div>
     </header>
@@ -236,7 +235,8 @@
 
       <!-- Part 3 -->
       <section id="benifit">
-        <div>
+        <div class="part3">
+        <div class="left_3">
           <h1>What benifit will you get</h1>
           <ul>
             <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
@@ -246,7 +246,7 @@
             <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
           </ul>
         </div>
-        <div>
+        <div class="right_3">
           <img src="./images/mac.png" alt="imgage Part 3" />
           <div>
             <div><img src="./images/person.png" alt="Icon Persion" /></div>
@@ -269,8 +269,12 @@
             <div><img src="./images/person.png" alt="Icon grouth up" /></div>
           </div>
         </div>
+        </div>
       </section>
 
+
+
+      
       <!-- Part 4 -->
       <section id="plan">
         <div>
