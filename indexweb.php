@@ -260,7 +260,6 @@
             <div><img src="./images/person.png" alt="Icon " /></div>
             <p>Money Tranfer success</p>
           </div>
-
           <div>
             <div>
               <p>Total Income</p>
