@@ -265,12 +265,10 @@
         </div>
       </section>
 
-
-
-      
       <!-- Part 4 -->
       <section id="plan">
-        <div>
+
+        <div class="choose">
           <h1>Choose plan</h1>
           <h1>That rigth for you</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisici</p>
@@ -279,6 +277,7 @@
             <button class="btn btn-info">Bill Yearly</button>
           </div>
         </div>
+
         <div>
           <div>
             <h1>Free</h1>
