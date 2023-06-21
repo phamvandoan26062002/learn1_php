@@ -266,8 +266,6 @@
               <img src="./images/images/mac.png" alt="icon message" style="height: 30px"/>
             </div>
             <p>Money Tranfer success</p>
-          </div>
-          <div>
             <div>
               <p>Total Income</p>
               <p>240$</p>
