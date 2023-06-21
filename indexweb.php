@@ -260,16 +260,7 @@
             </div>
           </div>
 
-          <div class="down">
-            <div>
-              <img src="./images/images/mac.png" alt="icon message" style="height: 30px"/>
-            </div>
-            <p>Money Tranfer success</p>
-            <div>
-              <p>Total Income</p>
-              <p>240$</p>
-            </div>
-          </div>
+          
         </div>
         </div>
       </section>
