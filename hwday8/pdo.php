@@ -47,4 +47,3 @@ function edit($data) {
     $sql = "UPDATE products SET Products_Name = :Products_Name, Price = :Price, Categories_id = :Categories_id WHERE id = :id";
     prepareSQL($sql, $data);
 }
-
