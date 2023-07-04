@@ -93,7 +93,7 @@
 // Tạo một lớp Nguoi với các thuộc tính tên, tuổi và địa chỉ.
 // Tạo phương thức để hiển thị thông tin người.
 
-        class human{
+        class People{
             public $name, $age, $address;
 
             public function __construct($name, $age, $address){
@@ -103,10 +103,15 @@
             }
 
             public function displayInfomation(){
-                
+                echo "Thông tin cá nhân:"."<br>";
+                echo "Họ và tên: ". $this->name ."<br>";
+                echo "Tuổi: ". $this->age ."<br>";
+                echo "Địa chỉ:". $this -> address ."<br>";
             }
-
         }
+
+        $People = new People("Phạm Văn Đoan", 21, "Hà Nội");
+        $People -> displayInfomation();
 
 
 
