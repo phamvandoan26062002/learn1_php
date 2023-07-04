@@ -93,6 +93,36 @@
 // Tạo một lớp Nguoi với các thuộc tính tên, tuổi và địa chỉ.
 // Tạo phương thức để hiển thị thông tin người.
 
+        class human{
+            public $name, $age, $address;
+
+            public function __construct($name, $age, $address){
+                $this -> name = $name;
+                $this -> age = $age;
+                $this -> address = $address;
+            }
+
+            public function displayInfomation(){
+                
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Câu 9: Bài tập Tạo lớp Sản phẩm:
 // Tạo một lớp SanPham với các thuộc tính tên, giá và mô tả.
 // Tạo phương thức để hiển thị thông tin chi tiết của sản phẩm.
