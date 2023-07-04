@@ -93,37 +93,25 @@
 // Tạo một lớp Nguoi với các thuộc tính tên, tuổi và địa chỉ.
 // Tạo phương thức để hiển thị thông tin người.
 
-        class People{
-            public $name, $age, $address;
+        // class People{
+        //     public $name, $age, $address;
 
-            public function __construct($name, $age, $address){
-                $this -> name = $name;
-                $this -> age = $age;
-                $this -> address = $address;
-            }
+        //     public function __construct($name, $age, $address){
+        //         $this -> name = $name;
+        //         $this -> age = $age;
+        //         $this -> address = $address;
+        //     }
 
-            public function displayInfomation(){
-                echo "Thông tin cá nhân:"."<br>";
-                echo "Họ và tên: ". $this->name ."<br>";
-                echo "Tuổi: ". $this->age ."<br>";
-                echo "Địa chỉ:". $this -> address ."<br>";
-            }
-        }
+        //     public function displayInfomation(){
+        //         echo "Thông tin cá nhân:"."<br>";
+        //         echo "Họ và tên: ". $this->name ."<br>";
+        //         echo "Tuổi: ". $this->age ."<br>";
+        //         echo "Địa chỉ:". $this -> address ."<br>";
+        //     }
+        // }
 
-        $People = new People("Phạm Văn Đoan", 21, "Hà Nội");
-        $People -> displayInfomation();
-
-
-
-
-
-
-
-
-
-
-
-
+        // $People = new People("Phạm Văn Đoan", 21, "Hà Nội");
+        // $People -> displayInfomation();
 
 
 
@@ -132,10 +120,42 @@
 // Tạo một lớp SanPham với các thuộc tính tên, giá và mô tả.
 // Tạo phương thức để hiển thị thông tin chi tiết của sản phẩm.
 
+            // class Product{
+            //     public $name, $price, $description;
+
+            //     public function __construct ($name, $price, $description){
+            //         $this -> name = $name;
+            //         $this -> price = $price;
+            //         $this -> description = $description;
+            //     }
+
+            //     public function displayProduct(){
+            //         echo "Thông tin chi tiết sản phẩm:" . "<br />";
+            //         echo "Tên sản phẩm:". $this -> name . "<br />";
+            //         echo "Giá:". $this -> price . "<br />";
+            //         echo "Mô tả:". $this -> description ;
+            //     }
+            // }
+
+            // $Product = new Product("Điều hòa", 100000000, "Điều hòa hỏng");
+            // $Product -> displayProduct();
+
+
+
+
+
 // Câu 10: Bài tập Tạo lớp Đặt phòng khách sạn:
 // Tạo một lớp DatPhong voi các thuộc tính tên, ngày đến và số đêm ở lại.
 // Tạo phương thức để tính tổng số tiền cần thanh toán dựa trên giá phòng.
 
+                class BookingRoom{
+
+                    public $name, $date, $timeOfStay;
+
+                    public function __construct($name, $date, $timeOfStay){
+                        
+                    }
+                }
 
 
 ?>
