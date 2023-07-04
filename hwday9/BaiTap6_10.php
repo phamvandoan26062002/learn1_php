@@ -150,12 +150,28 @@
 
                 class BookingRoom{
 
-                    public $name, $date, $timeOfStay;
+                    public $name, $date, $timeOfStay, $price;
 
-                    public function __construct($name, $date, $timeOfStay){
-                        
+                    public function __construct($name, $date, $price,$timeOfStay){
+                        $this -> name = $name;
+                        $this -> date = $date;
+                        $this -> price = $price;
+                        $this -> timeOfStay = $timeOfStay;
+                    }
+
+                    public function totalMoney(){
+                        echo "Khách hàng: ". $this -> name ."<br>";
+                        echo "Ngày đến:". $this -> date ."<br>";
+                        echo "Giá phòng theo đêm:". $this -> price ."/Đêm"."<br>";
+                        echo "Số đêm ở lại:" . $this -> timeOfStay."<br>";
+                        echo "Tổng hóa đơn:" . $this -> price * $this -> timeOfStay."<br>";
+
                     }
                 }
+
+                $BookingRoom = new BookingRoom("Phạm Văn Đoan", "04/07/2023", 1000000,  3);
+                $BookingRoom -> totalMoney();
+
 
 
 ?>
