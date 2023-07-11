@@ -171,28 +171,100 @@
 // Tạo một lớp "ArraySorter" (Sắp xếp mảng) và một lớp "LinkedListSorter" (Sắp xếp danh sách liên kết) 
 // triển khai interface Sortable cho cả hai lớp.
 
-interface Sortable {
-    public function sort();
+// interface Sortable {
+//     public function sort();
+// }
+
+// class ArraySorter implements Sortable {
+//     protected $data;
+
+//     public function __construct($data) {
+//         $this->data = $data;
+//     }
+
+//     public function sort() {
+//         sort($this->data);
+//         return $this->data;
+//     }
+// }
+
+// $arraySorter = new ArraySorter([9, 34, 452, 92, 5, 2]);
+// $sortedArray = $arraySorter->sort();
+// echo "Mảng sau khi sắp xếp: " . implode(", ", $sortedArray);
+
+
+// -------------------------------------------------------------------------------------------------------------------------------
+
+
+// Tạo một interface "Encryptable" (Có thể mã hóa) với phương thức "encrypt" và "decrypt". 
+// Tạo một lớp "AES" và một lớp "DES" kế thừa từ interface Encryptable và triển khai các phương thức theo thuật toán mã hóa tương ứng.
+
+interface Encryptable {
+    public function encrypt($plaintext);
+    public function decrypt($ciphertext);
 }
 
-class ArraySorter implements Sortable {
-    protected $data;
+class AES implements Encryptable {
+    private $key;
 
-    public function __construct($data) {
-        $this->data = $data;
+    public function __construct($key) {
+        $this->key = $key;
     }
 
-    public function sort() {
-        sort($this->data);
-        return $this->data;
+    public function encrypt($plaintext) {
+        $iv = openssl_random_pseudo_bytes(openssl_cipher_iv_length('AES-256-CBC'));
+        $ciphertext = openssl_encrypt($plaintext, 'AES-256-CBC', $this->key, OPENSSL_RAW_DATA, $iv);
+        $encrypted = base64_encode($iv . $ciphertext);
+        return $encrypted;
+    }
+
+    public function decrypt($ciphertext) {
+        $ciphertext = base64_decode($ciphertext);
+        $iv_length = openssl_cipher_iv_length('AES-256-CBC');
+        $iv = substr($ciphertext, 0, $iv_length);
+        $ciphertext = substr($ciphertext, $iv_length);
+        $plaintext = openssl_decrypt($ciphertext, 'AES-256-CBC', $this->key, OPENSSL_RAW_DATA, $iv);
+        return $plaintext;
     }
 }
 
-$arraySorter = new ArraySorter([9, 34, 452, 92, 5, 2]);
-$sortedArray = $arraySorter->sort();
-echo "Mảng sau khi sắp xếp: " . implode(", ", $sortedArray);
+class DES implements Encryptable {
+    private $key;
 
+    public function __construct($key) {
+        $this->key = $key;
+    }
 
+    public function encrypt($plaintext) {
+        $iv = openssl_random_pseudo_bytes(openssl_cipher_iv_length('DES-CBC'));
+        $ciphertext = openssl_encrypt($plaintext, 'DES-CBC', $this->key, OPENSSL_RAW_DATA, $iv);
+        $encrypted = base64_encode($iv . $ciphertext);
+        return $encrypted;
+    }
+
+    public function decrypt($ciphertext) {
+        $ciphertext = base64_decode($ciphertext);
+        $iv_length = openssl_cipher_iv_length('DES-CBC');
+        $iv = substr($ciphertext, 0, $iv_length);
+        $ciphertext = substr($ciphertext, $iv_length);
+        $plaintext = openssl_decrypt($ciphertext, 'DES-CBC', $this->key, OPENSSL_RAW_DATA, $iv);
+        return $plaintext;
+    }
+}
+
+// Sử dụng lớp AES và DES
+
+$aes = new AES("aes_key");
+$encrypted = $aes->encrypt("Hello, World!");
+echo "AES encrypted: " . $encrypted . "\n";
+$decrypted = $aes->decrypt($encrypted);
+echo "AES decrypted: " . $decrypted . "\n";
+
+$des = new DES("des_key");
+$encrypted = $des->encrypt("Hello, World!");
+echo "DES encrypted: " . $encrypted . "\n";
+$decrypted = $des->decrypt($encrypted);
+echo "DES decrypted: " . $decrypted . "\n";
 
 
 
