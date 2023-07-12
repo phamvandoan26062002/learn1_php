@@ -252,8 +252,6 @@ class DES implements Encryptable {
     }
 }
 
-// Sử dụng lớp AES và DES
-
 $aes = new AES("aes_key");
 $encrypted = $aes->encrypt("Hello, World!");
 echo "AES encrypted: " . $encrypted . "\n";
