@@ -1,11 +1,6 @@
 <?php
 
-<<<<<<< Updated upstream
 echo "Demo github nhóm 4";
-=======
-echo"Demo github nhóm 4";
-
->>>>>>> Stashed changes
 
 
 
