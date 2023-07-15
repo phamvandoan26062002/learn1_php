@@ -1,6 +1,7 @@
 <?php
 
-echo 
+echo "Demo github nhóm 4";
+
 
 
 $db_server = "localhost";
