@@ -1,6 +1,8 @@
 <?php
 
 echo "Demo github nhóm 4";
+ 
+echo "Sửa lần 1";
 
 $db_server = "localhost";
 $db_username = "root";
