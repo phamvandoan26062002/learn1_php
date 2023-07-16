@@ -5,7 +5,7 @@ echo "Demo github nhóm 4";
 echo "sửa lần 1";
 
 echo"Sửa lần 2";
-echo"Tôi la thành viên tôi sửa lần 3"
+echo"Tôi la thành viên tôi sửa lần 3";
 
 $db_server = "localhost";
 $db_username = "root";
