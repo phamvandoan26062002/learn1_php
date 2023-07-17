@@ -48,7 +48,7 @@ class Database
 
     public function edit($data)
     {
-        $sql = "UPDATE products SET Products_Name = :Products_Name, Price = :Price, Categories_id = :Categories_id WHERE id = :id";
+        $sql = "UPDATE products SET Products_Name = :Products_Name, Price = :Price, Categories_id = :Categories_id WHERE edit_id = :id";
         $this->prepareSQL($sql, $data);
     }
 }
