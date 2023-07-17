@@ -1,9 +1,9 @@
 <?php
     require_once "pdo.php";
-    $categories = $database->getAllCategories();
+    $categories = $database->all();
     
     if (isset($_GET['id'])) {
-        $product = $database->select($_GET['id'])[0];
+        $products = $database->select($_GET['id'])[0];
     } else {
         die('Invalid request');
     }
@@ -17,23 +17,23 @@
 <body>
     <div class="container mt-3">
         <a href="index.php" class="btn" style="margin-right: 5px"> < Back</a>
-        <h3>Update Product</h3>
-        <form action="action-update.php?id=<?= $product['id'] ?>" method="POST">
+        <h3>Update Products</h3>
+        <form action="action-update.php?id=<?= $products['id'] ?>" method="POST">
         <div class="mb-3">
             <label class="form-label">Name</label>
-            <input required type="text" class="form-control" name="name" value="<?= $product['name'] ?>">
+            <input required type="text" class="form-control" name="name" value="<?= $products['name'] ?>">
         </div>
         <div class="mb-3">
             <label class="form-label">Price</label>
-            <input required type="text" class="form-control" name="price" value="<?= $product['price'] ?>">
+            <input required type="text" class="form-control" name="price" value="<?= $products['price'] ?>">
         </div>
         <div class="mb-3">
             <label class="form-label">Category</label>
             <select class="form-select" aria-label="Default select example" name="category_id">
-                <option selected value="<?= $product['category_id'] ?>"><?= $product['category'] ?></option>
+                <option selected value="<?= $products['category_id'] ?>"><?= $products['category'] ?></option>
                 <?php 
                     foreach($categories as $category) {
-                        if($category['id'] == $product['category_id'])
+                        if($category['id'] == $products['category_id'])
                             continue;
                         else {
                             echo "<option value='{$category['id']}'>{$category['name']}</option>";
