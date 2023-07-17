@@ -30,7 +30,7 @@
         <div class="mb-3">
             <label class="form-label">Category</label>
             <select class="form-select" aria-label="Default select example" name="category_id">
-                <option selected value="<?= $products['category_id'] ?>"><?= $products['category'] ?></option>
+                <option selected value="<?= $products['Category_id'] ?>"><?= $products['Category'] ?></option>
                 <?php 
                     foreach($categories as $category) {
                         if($category['id'] == $products['category_id'])
