@@ -14,6 +14,14 @@ class CategoryManager {
     }
 }
 
+$DB_TYPE = 'mysql';
+$DB_HOST = 'localhost';
+$DB_NAME = 'test';
+$USER = 'root';
+$PW = '';
+
+$database = new Database($DB_TYPE, $DB_HOST, $DB_NAME, $USER, $PW);
+
 $request = $_POST;
 
 if (isset($request['Products_Name']) && isset($request['Price']) && isset($request['Categories_id'])) {
@@ -25,7 +33,7 @@ if (isset($request['Products_Name']) && isset($request['Price']) && isset($reque
 
     $categoryManager = new CategoryManager($database);
     $categoryManager->createCategory($category);
-    redirectHome();
+    RedirectHelper::redirectHome();
 } else {
     die('Invalid request');
 }
