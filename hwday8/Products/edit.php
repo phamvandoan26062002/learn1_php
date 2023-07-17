@@ -21,22 +21,22 @@
         <form action="action-update.php?id=<?= $products['id'] ?>" method="POST">
         <div class="mb-3">
             <label class="form-label">Name</label>
-            <input required type="text" class="form-control" name="name" value="<?= $products['name'] ?>">
+            <input required type="text" class="form-control" name="Products_Name" value="<?= $products['Products_Name'] ?>">
         </div>
         <div class="mb-3">
             <label class="form-label">Price</label>
-            <input required type="text" class="form-control" name="price" value="<?= $products['price'] ?>">
+            <input required type="text" class="form-control" name="Price" value="<?= $products['Price'] ?>">
         </div>
         <div class="mb-3">
             <label class="form-label">Category</label>
-            <select class="form-select" aria-label="Default select example" name="category_id">
-                <option selected value="<?= $products['Category_id'] ?>"><?= $products['Category'] ?></option>
+            <select class="form-select" aria-label="Default select example" name="Category_id">
+                <option selected value="<?= $products['Category_id'] ?>"><?= $products['Categories_id'] ?></option>
                 <?php 
-                    foreach($categories as $category) {
-                        if($category['id'] == $products['category_id'])
+                    foreach($Categories as $Category) {
+                        if($Category['id'] == $products['Category_id'])
                             continue;
                         else {
-                            echo "<option value='{$category['id']}'>{$category['name']}</option>";
+                            echo "<option value='{$Category['id']}'>{$Category['name']}</option>";
                         }
                     }
                 ?>

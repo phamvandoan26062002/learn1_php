@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <h1>Edit Product</h1>
 
     <form action="" method="POST">
-        <input type="hidden" name="edit_id" value="<?= $product['id'] ?>">
+        <input type="hidden" name="id" value="<?= $product['id'] ?>">
         <div>
             <label for="product-name">Product Name:</label>
             <input type="text" id="product-name" name="Products_Name" value="<?= $product['Products_Name'] ?>">
