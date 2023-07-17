@@ -1,6 +1,47 @@
 <?php
 require_once 'pdo.php';
-$categories = all();
+
+class ProductController
+{
+    private $database;
+
+    public function __construct($database)
+    {
+        $this->database = $database;
+    }
+
+    public function showCategories()
+    {
+        return $this->database->all();
+    }
+
+    public function createProduct($data)
+    {
+        $this->database->create($data);
+    }
+
+    public function deleteProduct($data)
+    {
+        $this->database->delete($data);
+    }
+
+    public function editProduct($data)
+    {
+        $this->database->edit($data);
+    }
+}
+
+$productController = new ProductController($database);
+
+$categories = $productController->showCategories();
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['delete_id'])) {
+        $productController->deleteProduct(array('id' => $_POST['delete_id']));
+    } elseif (isset($_POST['edit_id'])) {
+        // Do something for edit action
+    }
+}
 ?>
 
 <!doctype html>

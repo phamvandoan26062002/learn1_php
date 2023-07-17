@@ -1,21 +1,44 @@
 <?php
 require_once 'pdo.php';
 
-if (isset($_POST['edit_id'])) {
-    $id = $_POST['edit_id'];
+class EditProduct
+{
+    private $database;
 
-    // Truy vấn dữ liệu sản phẩm dựa trên ID
-    $sql = "SELECT * FROM products WHERE id = :id";
-    $stmt = prepareSQL($sql, array('id' => $id));
-    $stmt->execute();
-    $product = $stmt->fetch();
-
-    if (!$product) {
-        die('Product not found');
+    public function __construct($database)
+    {
+        $this->database = $database;
     }
-} else {
+
+    public function getProduct($id)
+    {
+        $sql = "SELECT * FROM products WHERE id = :id";
+        $stmt = $this->database->prepareSQL($sql, array('id' => $id));
+        $stmt->execute();
+        $product = $stmt->fetch();
+
+        if (!$product) {
+            die('Product not found');
+        }
+
+        return $product;
+    }
+
+    public function updateProduct($data)
+    {
+        $this->database->edit($data);
+    }
+}
+
+$editProduct = new EditProduct($database);
+
+$id = $_GET['edit_id'] ?? null;
+
+if (!$id) {
     die('Invalid request');
 }
+
+$product = $editProduct->getProduct($id);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $data = array(
@@ -25,21 +48,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'Categories_id' => $_POST['Categories_id']
     );
 
-    // Cập nhật thông tin sản phẩm
-    edit($data);
+    $editProduct->updateProduct($data);
 
-    // Chuyển hướng trở lại trang danh sách sau khi cập nhật thành công
     header('Location: ./index.php');
     exit();
 }
 ?>
+
 <!doctype html>
 <html lang="en">
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>Edit Product</title>
 </head>
 <body>

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <!-- Required meta tags -->
+   
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -73,23 +73,23 @@
             <label for="" class="form-label">Category_id</label>
             <select name="Categories_id" class="form-select">
                 <?php
-                // Kết nối đến cơ sở dữ liệu
+           
                 $conn = mysqli_connect('localhost', 'root', '', 'test');
                 if (!$conn) {
                     die("Kết nối đến cơ sở dữ liệu thất bại: " . mysqli_connect_error());
                 }
                 
-                // Truy vấn tất cả các ID trong bảng categories
+                
                 $query = "SELECT id FROM categories";
                 $result = mysqli_query($conn, $query);
                 if (mysqli_num_rows($result) > 0) {
-                    // Hiển thị các tùy chọn cho từng ID
+                  
                     while ($row = mysqli_fetch_assoc($result)) {
                         echo "<option value='" . $row['id'] . "'>" . $row['id'] . "</option>";
                     }
                 }
                 
-                // Đóng kết nối
+              
                 mysqli_close($conn);
                 ?>
             </select>
