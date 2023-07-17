@@ -18,7 +18,7 @@
         <table class="table table-hover">
         <thead>
             <tr>
-            <th scope="col">STT</th>
+            
             <th scope="col">ID</th>
             <th scope="col">Name</th>
             <th scope="col">Price</th>
@@ -28,15 +28,15 @@
         </thead>
         <tbody>
             <?php 
-                $i = 1;
+                
                 foreach($products as $products):
             ?>
             <tr>
-                <td><?= $i++; ?></td>
+                
                 <td><?= $products['id'] ?></td>
-                <td><?= $products['name'] ?></td>
-                <td><?= $products['price'] ?></td>
-                <td><?= $products['category'] ?> </td>
+                <td><?= $products['Products_Name'] ?></td>
+                <td><?= $products['Price'] ?></td>
+                <td><?= $products['Categories_id'] ?> </td>
                 <td>
                     <form id="delete_<?= $products['id']?>" action="delete.php" method="POST" style="display:flex">
                         <a href="./edit.php?id=<?= $products['id']?>" class="btn btn-dark" style="margin-right: 5px">Edit</a>
