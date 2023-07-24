@@ -15,7 +15,7 @@
     <div class="menu">
         <div class="menu-top">
             <div class="img">
-                <img src="../asset/image/logo.png" alt="logo">
+                <img src="./images_of_Đoan/logo.png" alt="logo">
             </div>
             <div class="menu-mid">
                 <form action="">
