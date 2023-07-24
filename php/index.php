@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="./asset/image/logo-shortcut.png" type="image/x-icon">
-    <link rel="stylesheet" href="../asset/css/index.css">
+    <link rel="stylesheet" href="./index.css">
 </head>
 <body>
     <!-- MENU  -->
