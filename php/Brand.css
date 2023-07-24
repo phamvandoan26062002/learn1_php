@@ -85,10 +85,7 @@ button:hover{
     }
     border-bottom: 1px solid var(--light-gray);
 }
-.menu-active{
-    color: var(--dark-blue) !important;
-    font-weight: 500!important;
-}
+
 /* FOOTER */
 .footer{
     display: flex;
