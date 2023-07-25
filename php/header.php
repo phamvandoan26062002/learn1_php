@@ -99,6 +99,19 @@ button:hover{
     color: #0071AF !important;
     font-weight: 600 !important;
 }
+
+.image-container {
+    width: 200px; /* Chiều rộng khung chứa ảnh */
+    height: 100px; /* Chiều cao khung chứa ảnh */
+    overflow: hidden; /* Ẩn phần ảnh vượt quá kích thước khung chứa */
+    position: relative; 
+}
+
+.image-container img {
+    position: absolute; /* Đặt ảnh bên trong khung chứa với vị trí tùy chỉnh */
+    top: -53px; /* Điều chỉnh vị trí theo chiều dọc */
+    left: 13px; /* Điều chỉnh vị trí theo chiều ngang */
+}
 </style>
 <div class="menu">
 <div class="menu-top">
@@ -106,7 +119,9 @@ button:hover{
         <span style="color: #0071AF">PHARMA</span>
         <span style="color: #15A5E3">DI</span>
     </div> -->
-    <img src = "./images_of_Đoan/logodemo3.png" width="200">
+    <div class="image-container">
+        <img src = "./images_of_Đoan/logodemo.png" width="200">
+    </div>
     <div class="menu-mid">
         <form action="">
             <input type="text" placeholder="Nhập nội dung tìm kiếm..." class="search">
