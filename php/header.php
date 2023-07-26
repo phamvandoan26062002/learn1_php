@@ -115,13 +115,11 @@ button:hover{
 </style>
 <div class="menu">
 <div class="menu-top">
-    <!-- <div class="logo">
+    <div class="logo">
         <span style="color: #0071AF">PHARMA</span>
         <span style="color: #15A5E3">DI</span>
-    </div> -->
-    <div class="image-container">
-        <img src = "./images_of_Đoan/logodemo.png" width="200">
     </div>
+   
     <div class="menu-mid">
         <form action="">
             <input type="text" placeholder="Nhập nội dung tìm kiếm..." class="search">
@@ -138,9 +136,9 @@ button:hover{
     </div>
 </div>
 <div class="menu-bottom">
-    <a href="http://localhost/PharmaDI/layout/index.php" class="menu-active">TRANG CHỦ</a>
+    <a href="http://localhost/PharmaDI/layout/index.php" >TRANG CHỦ</a>
     <a href="http://localhost/PharmaDI/layout/home.php">SẢN PHẨM</a>
-    <a href="">THƯƠNG HIỆU</a>
+    <a href="" class="menu-active">THƯƠNG HIỆU</a>
     <a href="">TIN TỨC</a>
 </div>
 </div>

@@ -13,8 +13,15 @@
 <body>
     <?php require "./header.php"; ?>
     <!-- CONTENT  -->
-    <div class="">
-        Điền nội dung vào đây này
+    <div class="breadcrumb0">
+        <ul class="breadcrumb">
+            <li><a href="#" class = "a1">Trang chủ</a></li>
+            <li><a href="#" class = "a2">Thương hiệu</a></li>
+        </ul>
+    </div class="container">
+        
+    <div>
+
     </div>
     <!-- FOOTER  -->
     <?php require "./footer.php"; ?>
