@@ -15,16 +15,76 @@
     <!-- CONTENT  -->
     <div class="breadcrumb0">
         <ul class="breadcrumb">
-            <li><a href="#" class = "a1">Trang chủ</a></li>
-            <li><a href="#" class = "a2">Thương hiệu</a></li>
+            <li><a href="#" class="a1">Trang chủ</a></li>
+            <li><a href="#" class="a2">Thương hiệu</a></li>
         </ul>
-    </div class="container">
-        
-    <div>
-
     </div>
+
+
+        <?php
+        $host = "localhost";
+        $username = "root";
+        $password = "";
+        $database = "test";
+
+        $conn = mysqli_connect($host, $username, $password, $database);
+
+        if (!$conn) {
+            die("Kết nối thất bại: " . mysqli_connect_error());
+        }
+
+        $sql = "SELECT logo_url FROM brands";
+        $result = mysqli_query($conn, $sql);
+
+        if (mysqli_num_rows($result) > 0) {
+            echo '<div class="logo-slider">';
+        echo '<p>Danh sách thương hiệu</p>';
+        while ($row = mysqli_fetch_assoc($result)) {
+            $imageURL = $row['logo_url'];
+            echo '<div class="brands">';
+            echo '<img   src="' . $imageURL . '" alt="Logo">';
+            echo '</div>';
+        }
+            echo '</div>';
+        }
+        mysqli_close($conn);
+        ?>
+    
+
+    <div class="brand-container">
+        <?php
+        $conn = mysqli_connect($host, $username, $password, $database);
+
+        if (!$conn) {
+            die("Kết nối thất bại: " . mysqli_connect_error());
+        }
+
+        $sql = "SELECT * FROM brands";
+        $result = mysqli_query($conn, $sql);
+
+        if (mysqli_num_rows($result) > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                $imageURL = $row['logo_url'];
+                $description = $row['description'];
+                $productCount = $row['product_count'];
+
+                echo '<div class="brand">';
+                echo '<img src="' . $imageURL . '" alt="Logo">';
+                echo '<p>' . $description . '</p>';
+                echo '<p class="productCount">' . $productCount . ' sản phẩm</p>';
+                echo '<a href = ""> Xem sản phẩm > </a>';
+                echo '</div>';
+            }
+        } else {
+            echo "Không có thông tin hãng.";
+        }
+
+        mysqli_close($conn);
+        ?>
+    </div>
+
     <!-- FOOTER  -->
     <?php require "./footer.php"; ?>
-    </div>
+
 </body>
 </html>
