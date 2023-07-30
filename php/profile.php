@@ -21,18 +21,15 @@
             </div>
             <div class="info">
                 <?php
-                // Nhúng file kết nối cơ sở dữ liệu
+
                 include "db_connects.php";
 
-                // Kết nối tới cơ sở dữ liệu
                 $conn = connectDB();
 
-                // Truy vấn dữ liệu từ cơ sở dữ liệu (Giả sử bảng chứa dữ liệu là 'nha_thuoc')
                 $sql = "SELECT * FROM info_customer LIMIT 1";
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0) {
-                    // Hiển thị thông tin từ cơ sở dữ liệu
                     $row = $result->fetch_assoc();
                     echo "<p><strong class='label'>Tên nhà thuốc</strong> <span class='value'>" . $row["ten_nha_thuoc"] . "</span></p>";
                     echo "<p><strong class='label'>Người liên hệ</strong> <span class='value'>" . $row["nguoi_lien_he"] . "</span></p>";
@@ -45,7 +42,6 @@
                     echo "Không có dữ liệu.";
                 }
 
-                // Đóng kết nối
                 $conn->close();
                 ?>
             </div>
