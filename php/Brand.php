@@ -12,52 +12,47 @@
 </head>
 <body>
     <?php require "./header.php"; ?>
-    <!-- CONTENT  -->
+    
     <div class="breadcrumb0">
         <ul class="breadcrumb">
             <li><a href="#" class="a1">Trang chủ</a></li>
             <li><a href="#" class="a2">Thương hiệu</a></li>
         </ul>
     </div>
-
-
-        <?php
-        $host = "localhost";
-        $username = "root";
-        $password = "";
-        $database = "test";
-
-        $conn = mysqli_connect($host, $username, $password, $database);
-
-        if (!$conn) {
-            die("Kết nối thất bại: " . mysqli_connect_error());
-        }
-
-        $sql = "SELECT logo_url FROM brands";
-        $result = mysqli_query($conn, $sql);
-
-        if (mysqli_num_rows($result) > 0) {
-            echo '<div class="logo-slider">';
-        echo '<p>Danh sách thương hiệu</p>';
-        while ($row = mysqli_fetch_assoc($result)) {
-            $imageURL = $row['logo_url'];
-            echo '<div class="brands">';
-            echo '<img   src="' . $imageURL . '" alt="Logo">';
-            echo '</div>';
-        }
-            echo '</div>';
-        }
-        mysqli_close($conn);
-        ?>
     
+    <!-- Phần HTML cho logo-container -->
+    <div class="logo-container">
+        <div class="logo-header">
+            <h2>Danh sách thương hiệu</h2>
+        </div>
+        <div class="logo-slider">
+            <?php
+            require "./db_connects.php";
+            $conn = connectDB();
+
+            $sql = "SELECT logo_url FROM brands";
+            $result = mysqli_query($conn, $sql);
+
+            $count = 0; 
+            while ($row = mysqli_fetch_assoc($result)) {
+                $imageURL = $row['logo_url'];
+                $displayStyle = $count < 6 ? "display: block;" : "display: none;";
+                echo '<div class="img_logo" style="' . $displayStyle . '">';
+                echo '<img src="' . $imageURL . '" alt="Logo">';
+                echo '</div>';
+                $count++;
+            }
+
+            mysqli_close($conn);
+            ?>
+        </div>
+    </div>
+    
+    <h2>Thương hiệu liên kết với PharmaDi</h2>
 
     <div class="brand-container">
         <?php
-        $conn = mysqli_connect($host, $username, $password, $database);
-
-        if (!$conn) {
-            die("Kết nối thất bại: " . mysqli_connect_error());
-        }
+        $conn = connectDB();
 
         $sql = "SELECT * FROM brands";
         $result = mysqli_query($conn, $sql);
@@ -69,10 +64,10 @@
                 $productCount = $row['product_count'];
 
                 echo '<div class="brand">';
-                echo '<img src="' . $imageURL . '" alt="Logo">';
-                echo '<p>' . $description . '</p>';
-                echo '<p class="productCount">' . $productCount . ' sản phẩm</p>';
-                echo '<a href = ""> Xem sản phẩm > </a>';
+                echo '<img class="input" src="' . $imageURL . '" alt="Logo">';
+                echo '<p class="input">' . $description . '</p>';
+                echo '<p class="input" id="count">' . $productCount . ' sản phẩm</p>';
+                echo '<a class="input" href = ""> Xem sản phẩm >>> </a>';
                 echo '</div>';
             }
         } else {
@@ -82,9 +77,53 @@
         mysqli_close($conn);
         ?>
     </div>
-
-    <!-- FOOTER  -->
+    
     <?php require "./footer.php"; ?>
+    
+    <!-- Các thẻ script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Đặt thời gian thay đổi ảnh là 4 giây (4000 ms)
+            var slideInterval = 4000;
+            var isMouseOverSlider = false; // Biến để kiểm tra trạng thái di chuột vào slider
+            
+            // Lấy danh sách các hình ảnh trong slider
+            var $slideContainer = $('.logo-slider');
+            var $slides = $slideContainer.find('.img_logo');
+            var currentIndex = 0;
 
+            function showNextSlide() {
+                // Kiểm tra xem di chuột có đang ở trên slider hay không
+                if (!isMouseOverSlider) {
+                    // Ẩn hết tất cả các ảnh
+                    $slides.css('display', 'none');
+
+                    // Hiển thị 6 ảnh tiếp theo
+                    for (var i = 0; i < 6; i++) {
+                        var nextIndex = (currentIndex + i) % $slides.length;
+                        $slides.eq(nextIndex).css('display', 'block');
+                    }
+
+                    // Tăng currentIndex để chuẩn bị cho lần thay đổi tiếp theo
+                    currentIndex = (currentIndex + 6) % $slides.length;
+                }
+            }
+
+            // Hiển thị 6 ảnh đầu tiên
+            showNextSlide();
+
+            // Tự động thay đổi ảnh sau mỗi khoảng thời gian slideInterval
+            setInterval(showNextSlide, slideInterval);
+
+            // Xử lý sự kiện khi di chuột vào và ra khỏi slider
+            $slideContainer.on('mouseover', function() {
+                isMouseOverSlider = true;
+            }).on('mouseout', function() {
+                isMouseOverSlider = false;
+            });
+        });
+    </script>
+    
 </body>
 </html>
