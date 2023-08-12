@@ -3,7 +3,7 @@ function connectDB() {
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "test";
+    $dbname = "pharmadi";
 
     $conn = new mysqli($servername, $username, $password, $dbname);
 

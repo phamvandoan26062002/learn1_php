@@ -75,51 +75,57 @@
         </div>
 
         <div class="accept_info">
-            <p>THÔNG TIN KHÁCH HÀNG</p>
-            <button type="submit" class="btn-accept">Phê duyệt</button>
-            <div class="name-user">      
-                <span>Mã khách hàng</span>
-                <input type="text" name="cusid" class="cusid" placeholder="">                       
-            </div>
-            <div class="name-user">      
-                <span>Trạng thái</span>
-                <input type="text" name="cusStatus" class="cusStatus" placeholder="">                       
-            </div>
-            <div class="name-user">      
-                <span>Tên nhà thuốc</span>
-                <input type="text" name="cusName" class="cusName" placeholder="">                       
-            </div>
-            <div class="name-user">      
-                <span>Tên người liên hệ</span>
-                <input type="text" name="cusContact" class="cusContact" placeholder="">                       
-            </div>
-            <div class="name-user">      
-                <span>Số điện thoại</span>
-                <input type="text" name="cusPhone" class="cusPhone" placeholder="">                       
-            </div>
-            <div class="name-user">      
-                <span>Địa chỉ</span>
-                <input type="text" name="cusGPPAddr" class="cusGPPAddr" placeholder="">                       
-            </div>
-            <div class="name-user">      
-                <span>Số GPP</span>
-                <input type="text" name="cusGPP" class="cusGPP" placeholder="">                       
-            </div>
-            <div class="name-user">      
-                <span>Ngày cấp</span>
-                <input type="text" name="cusGPPDate" class="cusGPPDate" placeholder="">                       
-            </div>
-            <div class="name-user">      
-                <span>Nơi cấp</span>
-                <input type="text" name="name" class="search-box" placeholder="">                       
-            </div>
+            
+
+                <form action="">
+
+                    <div class="content1">
+                        <p>THÔNG TIN KHÁCH HÀNG</p>
+                        <button type="submit" class="btn-accept">Phê duyệt</button>
+                        
+                    </div>
+
+                    <div class="id">      
+                            <span>Mã khách hàng</span>
+                            <input type="text" name="cusid" class="cusid" placeholder="">                       
+                        </div>
+                    <div class="Status">      
+                        <span>Trạng thái</span>
+                        <input type="text" name="cusStatus" class="cusStatus" placeholder="">                       
+                    </div>
+                    <div class="Name">      
+                        <span>Tên nhà thuốc</span>
+                        <input type="text" name="cusName" class="cusName" placeholder="">                       
+                    </div>
+                    <div class="Contact">      
+                        <span>Tên người liên hệ</span>
+                        <input type="text" name="cusContact" class="cusContact" placeholder="">                       
+                    </div>
+                    <div class="Phone">      
+                        <span>Số điện thoại</span>
+                        <input type="text" name="cusPhone" class="cusPhone" placeholder="">                       
+                    </div>
+                    <div class="Address">      
+                        <span>Địa chỉ</span>
+                        <input type="text" name="cusAddress" class="cusAddress" placeholder="">                       
+                    </div>
+                    <div class="GPP">      
+                        <span>Số GPP</span>
+                        <input type="text" name="cusGPP" class="cusGPP" placeholder="">                       
+                    </div>
+                    <div class="GPPDate">      
+                        <span>Ngày cấp</span>
+                        <input type="text" name="cusGPPDate" class="cusGPPDate" placeholder="">                       
+                    </div>
+                    <div class="GPPAddr">      
+                        <span>Nơi cấp</span>
+                        <input type="text" name="cusGPPAddr" class="cusGPPAddr" placeholder="">                       
+                    </div>
+                </form>
         </div>
 
         
 </div>
-
-
-
 
 
 

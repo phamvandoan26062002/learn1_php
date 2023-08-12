@@ -80,10 +80,10 @@ $conn = connectDB();
                     <!-- Ô tìm kiếm theo trạng thái -->
                     <div class="status">
                             <span>Trạng thái</span>
-                            <select name="account_status" class="search-box">
+                            <select name="cusStatus" class="search-box">
                                 <option value="Tat Ca">Tất cả</option>
                                 <option value="Duyet">Duyệt</option>
-                                <option value="Chua Duyet">Chưa duyệt</option>
+                                <option value="Chưa duyệt">Chưa duyệt</option>
                             </select>
                         
                     </div>
@@ -91,7 +91,7 @@ $conn = connectDB();
                     <!-- Ô tìm kiếm theo tên khách hàng -->
                     <div class="name-user">      
                             <span>Tên khách hàng</span>
-                            <input type="text" name="name" class="search-box" placeholder="  Nhập tên khách hàng">                       
+                            <input type="text" name="cusName" class="search-box" placeholder="  Nhập tên khách hàng">                       
                     </div>
 
                     <!-- Nút tìm kiếm -->
@@ -103,24 +103,24 @@ $conn = connectDB();
 
     <?php
     // Kiểm tra xem người dùng đã nhấn nút tìm kiếm chưa
-    if (isset($_GET['account_status']) || isset($_GET['name'])) {
+    if (isset($_GET['cusStatus']) || isset($_GET['cusName'])) {
         // Xử lý dữ liệu tìm kiếm
-        $status = $_GET['account_status'];
-        $name = $_GET['name'];
+        $status = $_GET['cusStatus'];
+        $cusName = $_GET['cusName'];
 
         // Tạo truy vấn dựa vào dữ liệu tìm kiếm
-        $sql = "SELECT * FROM customers WHERE 1=1"; // 1=1 để tránh lỗi khi không có điều kiện tìm kiếm
+        $sql = "SELECT * FROM customer WHERE 1=1"; // 1=1 để tránh lỗi khi không có điều kiện tìm kiếm
 
         if (!empty($status)) {
             if ($status === "Tat Ca") {
                 // Nếu người dùng chọn "Tất cả", không cần thêm điều kiện về trạng thái
             } else {
-                $sql .= " AND account_status='$status'";
+                $sql .= " AND cusStatus='$status'";
             }
         }
 
-        if (!empty($name)) {
-            $sql .= " AND name LIKE '%$name%'";
+        if (!empty($cusName)) {
+            $sql .= " AND cusName LIKE '%$cusName%'";
         }
 
         // Thực hiện truy vấn
@@ -145,47 +145,47 @@ $conn = connectDB();
                 echo '<tr>';
             echo '<td>' . $index . '</td>';
             echo '<td><a href="';
-            if ($row["account_status"] === "Chua Duyet") {
-                echo 'CustomerEdit.php?customer_id=' . $row["customer_id"];
+            if ($row["cusStatus"] === "Chưa duyệt") {
+                echo 'CustomerEdit.php?cusId=' . $row["cusId"];
             } else {
-                echo 'CustomerAddNew.php?customer_id=' . $row["customer_id"];
+                echo 'CustomerAddNew.php?cusId=' . $row["cusId"];
             }
-            echo '">' . $row["customer_id"] . '</a></td>';
+            echo '">' . $row["cusId"] . '</a></td>';
             echo '<td><a href="';
-            if ($row["account_status"] === "Chua Duyet") {
-                echo 'CustomerEdit.php?customer_id=' . $row["customer_id"];
+            if ($row["cusStatus"] === "Chưa duyệt") {
+                echo 'CustomerEdit.php?cusId=' . $row["cusId"];
             } else {
-                echo 'CustomerAddNew.php?customer_id=' . $row["customer_id"];
+                echo 'CustomerAddNew.php?cusId=' . $row["cusId"];
             }
-            echo '">' . $row["name"] . '</a></td>';
+            echo '">' . $row["cusName"] . '</a></td>';
             echo '<td><a href="';
-            if ($row["account_status"] === "Chua Duyet") {
-                echo 'CustomerEdit.php?customer_id=' . $row["customer_id"];
+            if ($row["cusStatus"] === "Chưa duyệt") {
+                echo 'CustomerEdit.php?cusId=' . $row["cusId"];
             } else {
-                echo 'CustomerAddNew.php?customer_id=' . $row["customer_id"];
+                echo 'CustomerAddNew.php?cusId=' . $row["cusId"];
             }
-            echo '">' . $row["phone"] . '</a></td>';
+            echo '">' . $row["cusPhone"] . '</a></td>';
             echo '<td><a href="';
-            if ($row["account_status"] === "Chua Duyet") {
-                echo 'CustomerEdit.php?customer_id=' . $row["customer_id"];
+            if ($row["cusStatus"] === "Chưa duyệt") {
+                echo 'CustomerEdit.php?cusId=' . $row["cusId"];
             } else {
-                echo 'CustomerAddNew.php?customer_id=' . $row["customer_id"];
+                echo 'CustomerAddNew.php?cusId=' . $row["cusId"];
             }
-            echo '">' . $row["address"] . '</a></td>';
+            echo '">' . $row["cusAddress"] . '</a></td>';
             echo '<td><a href="';
-            if ($row["account_status"] === "Chua Duyet") {
-                echo 'CustomerEdit.php?customer_id=' . $row["customer_id"];
+            if ($row["cusStatus"] === "Chưa duyệt") {
+                echo 'CustomerEdit.php?cusId=' . $row["cusId"];
             } else {
-                echo 'CustomerAddNew.php?customer_id=' . $row["customer_id"];
+                echo 'CustomerAddNew.php?cusId=' . $row["cusId"];
             }
-            echo '">' . $row["gpp_number"] . '</a></td>';
+            echo '">' . $row["cusGPP"] . '</a></td>';
             echo '<td><a href="';
-            if ($row["account_status"] === "Chua Duyet") {
-                echo 'CustomerEdit.php?customer_id=' . $row["customer_id"];
+            if ($row["cusStatus"] === "Chưa duyệt") {
+                echo 'CustomerEdit.php?cusId=' . $row["cusId"];
             } else {
-                echo 'CustomerAddNew.php?customer_id=' . $row["customer_id"];
+                echo 'CustomerAddNew.php?cusId=' . $row["cusId"];
             }
-            echo '">' . $row["account_status"] . '</a></td>';
+            echo '">' . $row["cusStatus"] . '</a></td>';
             echo '</tr>';
                 $index++;
             }
@@ -197,7 +197,7 @@ $conn = connectDB();
         echo '</div>';
     } else {
         // Hiển thị dữ liệu khách hàng khi chưa tìm kiếm bất cứ điều gì
-        $sql = "SELECT * FROM customers";
+        $sql = "SELECT * FROM customer";
         $result = $conn->query($sql);
 
         // Hiển thị dữ liệu khách hàng trong bảng
@@ -219,47 +219,47 @@ $conn = connectDB();
                 echo '<tr>';
             echo '<td>' . $index . '</td>';
             echo '<td><a href="';
-            if ($row["account_status"] === "Chua Duyet") {
-                echo 'CustomerEdit.php?customer_id=' . $row["customer_id"];
+            if ($row["cusStatus"] === "Chưa duyệt") {
+                echo 'CustomerEdit.php?cusId=' . $row["cusId"];
             } else {
-                echo 'CustomerAddNew.php?customer_id=' . $row["customer_id"];
+                echo 'CustomerAddNew.php?cusId=' . $row["cusId"];
             }
-            echo '">' . $row["customer_id"] . '</a></td>';
+            echo '">' . $row["cusId"] . '</a></td>';
             echo '<td><a href="';
-            if ($row["account_status"] === "Chua Duyet") {
-                echo 'CustomerEdit.php?customer_id=' . $row["customer_id"];
+            if ($row["cusStatus"] === "Chưa duyệt") {
+                echo 'CustomerEdit.php?cusId=' . $row["cusId"];
             } else {
-                echo 'CustomerAddNew.php?customer_id=' . $row["customer_id"];
+                echo 'CustomerAddNew.php?cusId=' . $row["cusId"];
             }
-            echo '">' . $row["name"] . '</a></td>';
+            echo '">' . $row["cusName"] . '</a></td>';
             echo '<td><a href="';
-            if ($row["account_status"] === "Chua Duyet") {
-                echo 'CustomerEdit.php?customer_id=' . $row["customer_id"];
+            if ($row["cusStatus"] === "Chưa duyệt") {
+                echo 'CustomerEdit.php?cusId=' . $row["cusId"];
             } else {
-                echo 'CustomerAddNew.php?customer_id=' . $row["customer_id"];
+                echo 'CustomerAddNew.php?cusId=' . $row["cusId"];
             }
-            echo '">' . $row["phone"] . '</a></td>';
+            echo '">' . $row["cusPhone"] . '</a></td>';
             echo '<td><a href="';
-            if ($row["account_status"] === "Chua Duyet") {
-                echo 'CustomerEdit.php?customer_id=' . $row["customer_id"];
+            if ($row["cusStatus"] === "Chưa duyệt") {
+                echo 'CustomerEdit.php?cusId=' . $row["cusId"];
             } else {
-                echo 'CustomerAddNew.php?customer_id=' . $row["customer_id"];
+                echo 'CustomerAddNew.php?cusId=' . $row["cusId"];
             }
-            echo '">' . $row["address"] . '</a></td>';
+            echo '">' . $row["cusAddress"] . '</a></td>';
             echo '<td><a href="';
-            if ($row["account_status"] === "Chua Duyet") {
-                echo 'CustomerEdit.php?customer_id=' . $row["customer_id"];
+            if ($row["cusStatus"] === "Chưa duyệt") {
+                echo 'CustomerEdit.php?cusId=' . $row["cusId"];
             } else {
-                echo 'CustomerAddNew.php?customer_id=' . $row["customer_id"];
+                echo 'CustomerAddNew.php?cusId=' . $row["cusId"];
             }
-            echo '">' . $row["gpp_number"] . '</a></td>';
+            echo '">' . $row["cusGPP"] . '</a></td>';
             echo '<td><a href="';
-            if ($row["account_status"] === "Chua Duyet") {
-                echo 'CustomerEdit.php?customer_id=' . $row["customer_id"];
+            if ($row["cusStatus"] === "Chưa duyệt") {
+                echo 'CustomerEdit.php?cusId=' . $row["cusId"];
             } else {
-                echo 'CustomerAddNew.php?customer_id=' . $row["customer_id"];
+                echo 'CustomerAddNew.php?cusId=' . $row["cusId"];
             }
-            echo '">' . $row["account_status"] . '</a></td>';
+            echo '">' . $row["cusStatus"] . '</a></td>';
             echo '</tr>';
                 $index++;
             }
